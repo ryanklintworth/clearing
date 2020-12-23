@@ -1,11 +1,70 @@
-const mongoose = require('mongoose');
+// CONTROLLERS FILE SETUP
+//————7 restful routes————
 
-const itemSchema = new mongoose.Schema({
-  name: String,
-  img: String,
-  price: Number
-})
+// =======================
+//      DEPENDENCIES
+// =======================
+const express = require('express');
+const router = express.Router();
+const Item = require('../models/item_schema.js');
+// =======================
+//  	    ROUTES
+// =======================
 
-const Item = mongoose.model('Item', itemSchema)
 
-module.exports = Item;
+
+// =======================
+//    	   GET
+// =======================
+// router.get('/', (req, res) => {
+//   Item.find({}, (error, allItems) => {
+//     res.render(
+//       'index.ejs',
+//       {
+//         items: allItems
+//       }
+//     )
+//   })
+// })
+
+app.get('/' , (req, res) => {
+  res.send('display items page');
+});
+
+
+// =======================
+//     		 SHOW
+// =======================
+
+
+
+// =======================
+//      	 EDIT
+// =======================
+
+
+
+// =======================
+//     	   NEW
+// =======================
+
+
+
+// =======================
+//     		 PUT
+// =======================
+
+
+
+// =======================
+//       	 POST
+// =======================
+
+
+
+// =======================
+//        DELETE
+// =======================
+
+
+module.exports = router;
