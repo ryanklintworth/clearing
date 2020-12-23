@@ -54,9 +54,9 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 // Routes
 //___________________
 localhost:3000
-app.get('/' , (req, res) => {
-  res.send('Are we still on?');
-});
+// app.get('/' , (req, res) => {
+//   res.send('Are we still on?');
+// });
 
 //___________________
 //Listener

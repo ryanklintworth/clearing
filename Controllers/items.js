@@ -16,20 +16,17 @@ const Item = require('../models/item_schema.js');
 // =======================
 //    	   GET
 // =======================
-// router.get('/', (req, res) => {
-//   Item.find({}, (error, allItems) => {
-//     res.render(
-//       'index.ejs',
-//       {
-//         items: allItems
-//       }
-//     )
-//   })
-// })
+router.get('/', (req, res) => {
+  Item.find({}, (error, allItems) => {
+    res.render(
+      'index.ejs',
+      {
+        items: allItems
+      }
+    )
+  })
+})
 
-router.get('/' , (req, res) => {
-  res.send('display items page');
-});
 
 
 // =======================
