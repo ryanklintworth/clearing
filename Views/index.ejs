@@ -5,14 +5,20 @@
     <title></title>
   </head>
   <body>
-    <h1>How about now?</h1>
     <header>Product Name Goes Here</header>
     <div class="container">
-      <div class="box-top-left">BTL</div>
-      <div class="box-top-right">BTR</div>
-      <div class="box-bottom-left">BBL</div>
-      <div class="box-bottom-right">BBR</div>
+      <ul>
+        <% for (let item of items ) { %>
+          <li>
+            <a href="/items/<%=item._id%>">
+              <%= item.name %>
+            </a>
+          </li>
+        <% } %>
+      </ul>
     </div>
-
+    <nav>
+      <a href="/items/new">Create a New Item</a>
+    </nav>
   </body>
 </html>
