@@ -18,26 +18,26 @@ router.get('/seed', (req, res) => {
   Item.create(
     [
       {
-          name:'Old Fashioned',
-          img:'pink',
-          price:3,
-          qty:3
+        name:'Old Fashioned',
+        img:'https://static.vinepair.com/wp-content/uploads/2018/03/Old-Fashioned-Recipe-card.jpg',
+        price:3,
+        qty:3
       },
       {
         name:'Daiquiri',
-        img:'pink',
+        img:'https://static.vinepair.com/wp-content/uploads/2016/03/daiquiri-card.jpg',
         price:3,
         qty:3
       },
       {
         name:'Negroni',
-        img:'pink',
+        img:'https://static.vinepair.com/wp-content/uploads/2016/03/negroni-card.jpg',
         price:3,
         qty:3
       },
       {
         name:'Manhattan',
-        img:'pink',
+        img:'https://static.vinepair.com/wp-content/uploads/2018/03/Manhattan-Recipe-card.jpg',
         price:3,
         qty:3
       }
@@ -67,7 +67,16 @@ router.get('/', (req, res) => {
 // =======================
 //     		 SHOW
 // =======================
-
+router.get('/:id', (req, res) => {
+  Item.findById(req.params.id, (error, foundItem) => {
+    res.render(
+      'show.ejs',
+      {
+        item:foundItem
+      }
+    )
+  })
+})
 
 
 // =======================
@@ -88,24 +97,38 @@ router.get('/:id/edit', (req, res) => {
 // =======================
 //     	   NEW
 // =======================
-
+router.get('/new', (req, res) => {
+    res.render('new.ejs');
+})
 
 
 // =======================
 //     		 PUT
 // =======================
-
+router.put('/:id', (req, res) => {
+  Item.findByIdAndUpdate(req.params.id, req.body, {new:true}, (error, updatedModel) => {
+      res.redirect('/items');
+  })
+})
 
 
 // =======================
 //       	 POST
 // =======================
-
+router.post('/', (req, res) => {
+  Item.create(req.body, (error, createdItem) => {
+    res.redirect('/items')
+  })
+})
 
 
 // =======================
 //        DELETE
 // =======================
-
+router.delete('/:id', (req, res) => {
+  Item.findByIdAndRemove(req.params.id, (error, data) => {
+    res.redirect('/items')
+  })
+})
 
 module.exports = router;

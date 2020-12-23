@@ -10,15 +10,13 @@
       <ul>
         <% for (let item of items ) { %>
           <li>
-            <a href="/items/<%=item._id%>">
-              <%= item.name %>
+            <h3><%=item.name%></h3>
+            <a href="/<%=item._id%>">
+              <img src="<%= item.img %>" alt="An image of a <%= item.name %>" />
             </a>
           </li>
         <% } %>
       </ul>
     </div>
-    <nav>
-      <a href="/items/new">Create a New Item</a>
-    </nav>
   </body>
 </html>
