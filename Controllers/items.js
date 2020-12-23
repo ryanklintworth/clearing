@@ -27,7 +27,7 @@ const Item = require('../models/item_schema.js');
 //   })
 // })
 
-app.get('/' , (req, res) => {
+router.get('/' , (req, res) => {
   res.send('display items page');
 });
 
