@@ -5,7 +5,23 @@
     <title></title>
   </head>
   <body>
-    <h1>Edit Page</h1>
-
+    <div class="container">
+      <h1>Edit Page</h1>
+        <div class="jumbo">
+          <form class="edit" action="/<%=item.id%>?_method=PUT" method="post">
+            <label for="name">Name: </label>
+            <input type="text" name="name" value="<%=item.name%>" id="name">
+            <label for="img">Image: </label>
+            <input type="text" name="img" value="<%=item.img%>" id="img">
+            <label for="description">Description: </label>
+            <textarea name="description" value="" id="description"><%=item.description%></textarea>
+            <label for="price">Price: </label>
+            <input type="number" name="price" value="<%=item.price || 0 %>" min="0" step=".01">
+            <label for="qty">Quantity: </label>
+            <input type="number" name="qty" value="<%=item.qty || 0 %>" min="0" id="qty"> <br>
+            <input type="submit" name="submit" value="submit" class="edit-button">
+          </form>
+        </div>
+    </div>
   </body>
 </html>

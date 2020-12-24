@@ -21,24 +21,28 @@ router.get('/seed', (req, res) => {
         name:'Old Fashioned',
         img:'https://static.vinepair.com/wp-content/uploads/2018/03/Old-Fashioned-Recipe-card.jpg',
         price:3,
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. ',
         qty:3
       },
       {
         name:'Daiquiri',
         img:'https://static.vinepair.com/wp-content/uploads/2016/03/daiquiri-card.jpg',
         price:3,
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. ',
         qty:3
       },
       {
         name:'Negroni',
         img:'https://static.vinepair.com/wp-content/uploads/2016/03/negroni-card.jpg',
         price:3,
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. ',
         qty:3
       },
       {
         name:'Manhattan',
         img:'https://static.vinepair.com/wp-content/uploads/2018/03/Manhattan-Recipe-card.jpg',
         price:3,
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. ',
         qty:3
       }
     ],
