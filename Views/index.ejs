@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title></title>
+    <%- include ('./partials/head.ejs') %>
   </head>
   <body>
-    <header>Product Name Goes Here</header>
+    <header>HEADER</header>
     <div class="container">
       <ul>
         <% for (let item of items ) { %>
@@ -17,9 +16,7 @@
           </li>
         <% } %>
       </ul>
-      <div class="admin-actions">
-
-      </div>
     </div>
+    <footer>FOOTER</footer>
   </body>
 </html>

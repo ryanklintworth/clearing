@@ -1,27 +1,35 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <div class="container">
-      <h1>Show Page</h1>
-      <ul>
-        <li><h3><%=item.name; %></h3></li>
-        <li><img src="<%=item.img; %>" alt="An image of a <%= item.name %>"></li>
-        <li>description: <%=item.description; %></li>
-        <% if (item.qty <= 0) { %>
-          <h3>OUT OF STOCK</h3>
-        <% } else { %>
-          <h6>Only <%=item.qty %> remining</h6>
-        <% } %>
-        <li>quantity: <%=item.qty; %></li>
-        <li>price: <%=item.price; %></li>
-      </ul>
-      <button type="button" name="button">
-        <a href="/">Back</a>
-      </button>
+<head>
+  <%- include ('./partials/head.ejs') %>
+</head>
+<body>
+  <header>HEADER</header>
+  <div class="container">
+    <div class="image-sidebar">
+      <img class="item-image" src="<%=item.img; %>" alt="An image of a <%= item.name %>">
     </div>
-  </body>
-</html>
+    <div class="show-page-sidebar">
+      <h3><%=item.name%></h3>
+      <p><%=item.description; %></p>
+      <% if (item.qty <= 0) { %>
+        <h5>OUT OF STOCK</h5>
+        <% } else { %>
+          <h6>Only <%=item.qty%> remaining</h6>
+          <form action="/<%=item._id%>/buy?_method=put" method="POST">
+            <button type="submit">BUY</button>
+          </form>
+          <% } %>
+          <h5>price: <%=item.price; %></h5>
+          <a href="/<%=item._id%>/edit"><button type="button" name="button" class="edit-button">Edit</button></a>
+          <form action="/<%=item._id%>?_method=DELETE" method="POST">
+            <button type="submit" class="delete-button">DELETE</button>
+          </form>
+
+        </div>
+      </div>
+      <footer>FOOTER          <button type="button" name="button">
+                  <a href="/">Back</a>
+                </button></footer>
+    </body>
+    </html>

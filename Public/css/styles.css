@@ -1,0 +1,39 @@
+/* VARIABLES */
+:root {
+  --crimson: #D7263D;
+  --oxford-blue: #02182B;
+  --tufts-blue: #0197F6;
+  --blue-munsell: #448FA3;
+  --middle-blue: #68C5DB;
+  --whitesmoke: whitesmoke;
+}
+
+header, footer {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  font-size: 75px;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0 10px 0;
+  color: var(--whitesmoke);
+  background: var(--oxford-blue);
+}
+
+body {
+  background: var(--whitesmoke);
+}
+
+.show-page-sidebar {
+  float: left;
+  width: 25%;
+  padding-left: 60px;}
+
+.image-sidebar{
+  float: left;
+  width: 75%;
+}
+
+.item-image {
+  width: 75%;
+}
