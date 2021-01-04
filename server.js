@@ -54,9 +54,11 @@ app.use('/', itemsController)
 // Routes
 //___________________
 localhost:3000
-// app.get('/' , (req, res) => {
-//   res.send('Are we still on?');
-// });
+
+app.get('/' , (req, res) => {
+  res.send('Are we still on?');
+});
+
 
 //___________________
 //Listener

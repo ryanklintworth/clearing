@@ -2,34 +2,59 @@
 <html lang="en" dir="ltr">
 <head>
   <%- include ('./partials/head.ejs') %>
+  <style type="text/css">
+    body {
+      background-image: url('/images/background-img.jpeg');
+      background-size: cover;
+      background-attachment: fixed;
+    }
+  </style>
 </head>
-<body>
-  <header>HEADER</header>
-  <div class="container">
-    <div class="image-sidebar">
-      <img class="item-image" src="<%=item.img; %>" alt="An image of a <%= item.name %>">
+<body class="index-body">
+  <nav>
+    <div class="logo">
+      <h4>jv</h4>
     </div>
-    <div class="show-page-sidebar">
-      <h3><%=item.name%></h3>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/events">Events</a></li>
+    </ul>
+  </nav>
+  <div class="show-container">
+    <div class="show-image-content">
+      <img class="show-item-image" src="<%=item.img%>" alt="An image of a <%=item.name%>">
+    </div>
+    <div class="show-info-content">
+      <h1><%=item.name%></h1>
       <p><%=item.description; %></p>
       <% if (item.qty <= 0) { %>
-        <h5>OUT OF STOCK</h5>
+        <h3>OUT OF STOCK</h3>
         <% } else { %>
-          <h6>Only <%=item.qty%> remaining</h6>
-          <form action="/<%=item._id%>/buy?_method=put" method="POST">
-            <button type="submit">BUY</button>
-          </form>
-          <% } %>
-          <h5>price: <%=item.price; %></h5>
-          <a href="/<%=item._id%>/edit"><button type="button" name="button" class="edit-button">Edit</button></a>
-          <form action="/<%=item._id%>?_method=DELETE" method="POST">
-            <button type="submit" class="delete-button">DELETE</button>
-          </form>
-
+          <h3>Only <%=item.qty%> remaining</h3>
+          <h5>Add to cart $<%=item.price; %></h5>
+          <div class="buy-button">
+            <form action="/<%=item._id%>/buy?_method=put" method="POST">
+              <button type="submit">BUY</button>
+            </form>
+            <% } %>
+          </div>
+          <!-- edit button -->
+          <div class="edit-button">
+            <a href="/<%=item._id%>/edit"><button type="button" name="button">Edit</button></a>
+          </div>
+          <!-- delete button -->
+          <div class="delete-button">
+            <form action="/<%=item._id%>?_method=DELETE" method="POST">
+              <button type="submit" class="delete-button">DELETE</button>
+            </form>
+          </div>
+          <!-- back button -->
+          <div class="back-button">
+            <a href="/"><button type="button" name="button">Back</button></a>
+          </div>
         </div>
       </div>
-      <footer>FOOTER          <button type="button" name="button">
-                  <a href="/">Back</a>
-                </button></footer>
+      <footer></footer>
     </body>
     </html>

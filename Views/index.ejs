@@ -2,21 +2,35 @@
 <html lang="en" dir="ltr">
   <head>
     <%- include ('./partials/head.ejs') %>
+    <style type="text/css">
+      body {
+        background-image: url('/images/background-img.jpeg');
+        background-size: cover;
+        background-attachment: fixed;
+      }
+    </style>
   </head>
-  <body>
-    <header>HEADER</header>
-    <div class="container">
-      <ul>
-        <% for (let item of items ) { %>
-          <li>
-            <h3><%=item.name%></h3>
-            <a href="/<%=item._id%>">
-              <img src="<%= item.img %>" alt="An image of a <%= item.name %>" />
-            </a>
-          </li>
-        <% } %>
+  <body class="index-body">
+    <nav>
+      <div class="logo">
+        <h4>jv</h4>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/events">Events</a></li>
       </ul>
+    </nav>
+
+    <div class="index-container">
+        <% for (let item of items ) { %>
+          <div class="index-content">
+            <a href="/<%=item._id%>">
+              <img class="item-image" src="<%=item.img%>" alt="An image of a <%= item.name %>" />
+            </a>
+          </div>
+        <% } %>
     </div>
-    <footer>FOOTER</footer>
+    <!-- <footer>FOOTER</footer> -->
   </body>
 </html>
