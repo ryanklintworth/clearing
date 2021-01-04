@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <%- include ('./partials/head.ejs') %>
+  <style type="text/css">
+    body {
+      background-image: url('/images/background-img.jpeg');
+      background-size: cover;
+      background-attachment: fixed;
+    }
+  </style>
+</head>
+<body class="index-body">
+  <nav>
+    <div class="logo">
+      <h4>jv</h4>
+    </div>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/events">Events</a></li>
+    </ul>
+  </nav>
+  <div class="show-container">
+    <div class="show-image-content">
+      <img class="show-item-image" src="<%=item.img%>" alt="An image of a <%=item.name%>">
+    </div>
+    <div class="show-info-content">
+      <h1><%=item.name%></h1>
+      <p><%=item.description; %></p>
+      <% if (item.qty <= 0) { %>
+        <h3>OUT OF STOCK</h3>
+        <% } else { %>
+          <h3>Only <%=item.qty%> remaining</h3>
+          <h5>Add to cart $<%=item.price; %></h5>
+          <div class="buy-button">
+            <form action="/<%=item._id%>/buy?_method=put" method="POST">
+              <button type="submit">BUY</button>
+            </form>
+            <% } %>
+          </div>
+          <!-- edit button -->
+          <div class="edit-button">
+            <a href="/<%=item._id%>/edit"><button type="button" name="button">Edit</button></a>
+          </div>
+          <!-- delete button -->
+          <div class="delete-button">
+            <form action="/<%=item._id%>?_method=DELETE" method="POST">
+              <button type="submit" class="delete-button">DELETE</button>
+            </form>
+          </div>
+          <!-- back button -->
+          <div class="back-button">
+            <a href="/"><button type="button" name="button">Back</button></a>
+          </div>
+        </div>
+      </div>
+      <footer></footer>
+    </body>
+    </html>
