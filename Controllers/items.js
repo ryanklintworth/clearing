@@ -135,7 +135,7 @@ router.put('/:id/buy', (req, res) => {
 // =======================
 //    	   SEED
 // =======================
-router.get('/seed', (req, res) => {
+router.get('/admin/seed', (req, res) => {
   Item.create(
     [
       {
