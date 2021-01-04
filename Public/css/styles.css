@@ -60,7 +60,6 @@ nav {
   -webkit-text-fill-color: transparent;
 }
 
-/* ABOUT PAGE */
 
 .meet-the-artist {
   font-weight: 500;
@@ -92,7 +91,6 @@ nav {
   font-size: 40px;
 }
 
-/* HOME PAGE */
 
 .index-container {
   display: grid;
@@ -111,7 +109,6 @@ nav {
 
 }
 
-/* EDIT PAGE */
 
 .edit-container {
   padding: 3em;
@@ -127,7 +124,6 @@ nav {
 
 
 
-/* SHOW PAGE */
 
 .show-container {
   padding: 3em;
@@ -211,7 +207,6 @@ button[type="button"]:hover {
 
 }
 
-/* EVENTS PAGE */
 
 .events-container {
   margin: 3em;
