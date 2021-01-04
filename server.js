@@ -46,7 +46,7 @@ app.use(express.json());// returns middleware that only parses JSON - may or may
 app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 
 // Controllers
-const itemsController = require('./Controllers/items.js');
+const itemsController = require('./controllers/items.js');
 app.use('/', itemsController)
 
 
