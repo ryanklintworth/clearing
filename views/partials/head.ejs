@@ -1,6 +1,308 @@
 <meta charset="utf-8">
 <title>Clearing</title>
 
-<base href="/">
+<!-- <base href="/"> -->
 <!-- linked personalized CSS -->
-<link rel="stylesheet" type="text/css" href="css/styles.css">
+<!-- <link rel="stylesheet" type="text/css" href="css/styles.css"> -->
+
+<style type="text/css">
+
+
+  :root {
+    --crimson: #bc6093;
+    --oxford-blue: #02182B;
+    --tufts-blue: #5a94bf;
+    --blue-munsell: #448FA3;
+    --middle-blue: #68C5DB;
+    --whitesmoke: whitesmoke;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background: var(--whitesmoke);
+    background-image: url('/images/background-img.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--middle-blue);
+  }
+
+  .logo h4 {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 70px;
+    transform: rotate(-15deg);
+    background: linear-gradient(var(--crimson), var(--tufts-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .nav-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: var(--middle-blue);
+  }
+
+  .nav-links li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+
+  .nav-links a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-size: 40px;
+    color: var(--whitesmoke);
+  }
+
+  .nav-links a:hover {
+    background: linear-gradient(var(--crimson), var(--tufts-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+
+  .meet-the-artist {
+    font-weight: 500;
+    padding: 1em 0 1em 0;
+    color: var(--crimson);
+    background: var(--oxford-blue);
+    border-bottom: 2px solid var(--middle-blue);
+  }
+
+  .about-artist-image-container {
+    padding: 3em;
+  }
+
+  .artist-image {
+    height: 100%;
+    width: 100%;
+  }
+
+  .about-text-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--oxford-blue);
+    color: var(--whitesmoke);
+    padding: 3em;
+  }
+
+  .artist-text {
+    letter-spacing: 2px;
+    font-size: 40px;
+  }
+
+
+  .index-container {
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+  }
+
+  .index-content {
+    padding: 1em;
+  }
+
+  .item-image {
+    padding: 1em;
+    height: 100%;
+    width: 100%;
+    background: var(--oxford-blue);
+
+  }
+
+
+  .edit-container {
+    padding: 3em;
+  }
+
+  .edit-content {
+    color: var(--whitesmoke);
+    background: var(--oxford-blue);
+    padding: 15px;
+    box-sizing: border-box;
+    overflow: auto;
+  }
+
+
+
+
+  .show-container {
+    padding: 3em;
+  }
+
+  .show-info-content {
+    color: var(--whitesmoke);
+    background: var(--oxford-blue);
+    padding: 15px;
+    box-sizing: border-box;
+    overflow: auto;
+  }
+
+  .show-image-content{
+    display: flex;
+    justify-content: center;
+    margin: 3em;
+
+  }
+
+  .show-item-image {
+    height: 100%;
+    width: 100%;
+  }
+
+  .show-info-content p {
+    font-size: 40px;
+  }
+
+  .show-info-content h1 {
+    text-align: center;
+    font-size: 54px;
+    font-weight: 500;
+    padding: .5em;
+    color: var(--crimson);
+    border-bottom: 2px solid var(--middle-blue);
+  }
+
+  .show-info-content h3 {
+    text-align: center;
+    font-size: 40px;
+    color: var(--crimson);
+  }
+
+  .show-info-content h5 {
+    text-align: center;
+    font-size: 35px;
+  }
+
+  button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 2px solid var(--crimson);
+  }
+
+  button[type="submit"] {
+    background: var(--middle-blue);
+    color: var(--whitesmoke);
+    transition: 0.2s ease-in-out;
+  }
+
+  button[type="submit"]:hover {
+    cursor: pointer;
+    background: var(--crimson);
+    border: 2px solid var(--tufts-blue);
+
+  }
+
+  button[type="button"] {
+    background: var(--middle-blue);
+    color: var(--whitesmoke);
+    transition: 0.2s ease-in-out;
+  }
+
+  button[type="button"]:hover {
+    cursor: pointer;
+    background: var(--crimson);
+    border: 2px solid var(--tufts-blue);
+
+  }
+
+
+  .events-container {
+    margin: 3em;
+  }
+
+  .events-content {
+    background: var(--oxford-blue);
+    padding: 15px;
+    box-sizing: border-box;
+    overflow: auto;
+  }
+
+  .events-h1 {
+    font-size: 54px;
+    font-weight: 500;
+    padding: 1em 0 1em 0;
+    color: var(--crimson);
+    border-bottom: 2px solid var(--middle-blue);
+  }
+
+  .event-p {
+    color: var(--whitesmoke);
+    font-size: 34px;
+  }
+
+  .account-info {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px 0;
+  }
+
+  legend {
+    font-weight: 500;
+    color: var(--crimson);
+  }
+
+  label {
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--tufts-blue);
+  }
+
+  input {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 2px solid var(--crimson);
+  }
+
+  input:focus {
+    outline: 0;
+    border: 2px solid var(--tufts-blue);
+  }
+
+  input[type="submit"] {
+    background: var(--middle-blue);
+    color: var(--whitesmoke);
+    transition: 0.2s ease-in-out;
+  }
+
+  input[type="submit"]:hover {
+    cursor: pointer;
+    background: var(--crimson);
+    border: 2px solid var(--tufts-blue);
+
+  }
+
+  form {
+    color: var(--whitesmoke);
+    padding: 1em;
+  }
+
+  footer {
+   width: 100%;
+   height: 200px;
+   display: flex;
+   font-size: 75px;
+   justify-content: center;
+   align-items: center;
+   color: var(--whitesmoke);
+   background: var(--oxford-blue);
+  }
+
+
+</style>
