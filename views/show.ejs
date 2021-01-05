@@ -26,7 +26,7 @@
         <h3>OUT OF STOCK</h3>
         <% } else { %>
           <h3>Only <%=item.qty%> remaining</h3>
-          <h5>Add to cart $<%=item.price; %></h5>
+          <h5>Price: $<%=item.price; %></h5>
           <div class="buy-button">
             <form action="/<%=item._id%>/buy?_method=put" method="POST">
               <button type="submit">BUY</button>
@@ -35,7 +35,7 @@
           </div>
           <!-- edit button -->
           <div class="edit-button">
-            <a href="/<%=item._id%>/edit"><button type="button" name="button">Edit</button></a>
+            <a href="/<%=item._id%>/edit"><button type="button" name="button">EDIT</button></a>
           </div>
           <!-- delete button -->
           <div class="delete-button">
@@ -45,7 +45,7 @@
           </div>
           <!-- back button -->
           <div class="back-button">
-            <a href="/"><button type="button" name="button">Back</button></a>
+            <a href="/"><button type="button" name="button">BACK</button></a>
           </div>
         </div>
       </div>
