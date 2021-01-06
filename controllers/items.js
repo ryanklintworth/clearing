@@ -19,8 +19,8 @@ router.get('/events', (req, res) => {
     res.render('events.ejs');
 })
 
-router.get('/projects', (req, res) => {
-    res.render('projects.ejs');
+router.get('/attending', (req, res) => {
+    res.render('attending.ejs');
 })
 
 // =======================
@@ -140,114 +140,114 @@ router.get('/admin/seed', (req, res) => {
     [
       {
         name:'Spaces/Balance',
-        img:'https://f4.bcbits.com/img/a2626792907_2.jpg',
-        price:3,
-        description:'The Old Fashioned is one of the oldest cocktails, developed during the 19th century. Originally, an "old fashioned" cocktail was a standard cocktail created by combining spirits, bitters, water, and sugar. ',
+        img:'https://f4.bcbits.com/img/a2626792907_10.jpg',
+        price:5,
+        description:"https://bandcamp.com/EmbeddedPlayer/album=4065810588/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/",
         qty:3
       },
       {
         name:'Point of View',
         img:'https://f4.bcbits.com/img/a2982721089_2.jpg',
-        price:3,
-        description:'When it comes to the Daiquiri, you need to set aside your preconceptions about sickly-sweet slushy concoctions. ',
+        price:5,
+        description:"https://bandcamp.com/EmbeddedPlayer/album=2082256940/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/",
         qty:3
       },
       {
         name:'Moonbath',
         img:'https://f4.bcbits.com/img/a2973512665_2.jpg',
-        price:3,
-        description:'The Negroni is a world-famous Italian aperitivo created in Florence, Italy in 1919. The cocktail traditionally mixes gin, sweet vermouth, and the iconic Italian red bitter Campari, though the use of other bitters is a source of debate. As the story goes, the drink was invented after Count Camillo Negroni requested an Americano with more kick while imbibing at the city’s Caffe Giacosa. The resulting cocktail, which included gin, was named in honor of the Count. The Negroni is often served before a meal in order to stimulate the appetite, but is versatile enough to be enjoyed at any time. ',
+        price:5,
+        description:"https://bandcamp.com/EmbeddedPlayer/album=4195293747/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/",
         qty:3
       },
       {
         name:'Be There',
         img:'https://f4.bcbits.com/img/a0332022896_2.jpg',
-        price:3,
-        description:'Legend has it that the Manhattan originated in New York City, sometime in the 1870s, mixed together in honor of hometown presidential candidate Samuel J. Tilden. ',
+        price:5,
+        description:"https://bandcamp.com/EmbeddedPlayer/album=699374123/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/",
         qty:3
       },
       {
         name:'Differences',
         img:'https://f4.bcbits.com/img/a2465165707_2.jpg',
-        price:3,
-        description:'The Old Fashioned is one of the oldest cocktails, developed during the 19th century. Originally, an "old fashioned" cocktail was a standard cocktail created by combining spirits, bitters, water, and sugar. ',
+        price:5,
+        description:"https://bandcamp.com/EmbeddedPlayer/album=798146052/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/",
         qty:3
       },
       {
-        name:'Lights. Clearing.',
+        name:'Lights',
         img:'https://f4.bcbits.com/img/a2932362510_2.jpg',
-        price:3,
-        description:'When it comes to the Daiquiri, you need to set aside your preconceptions about sickly-sweet slushy concoctions. ',
+        price:5,
+        description:"https://bandcamp.com/EmbeddedPlayer/album=3267829842/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/",
         qty:3
       },
       {
         name:'Threat',
         img:'https://f4.bcbits.com/img/a2745731794_2.jpg',
-        price:3,
-        description:'The Negroni is a world-famous Italian aperitivo created in Florence, Italy in 1919. The cocktail traditionally mixes gin, sweet vermouth, and the iconic Italian red bitter Campari, though the use of other bitters is a source of debate. As the story goes, the drink was invented after Count Camillo Negroni requested an Americano with more kick while imbibing at the city’s Caffe Giacosa. The resulting cocktail, which included gin, was named in honor of the Count. The Negroni is often served before a meal in order to stimulate the appetite, but is versatile enough to be enjoyed at any time. ',
+        price:5,
+        description:"https://bandcamp.com/EmbeddedPlayer/album=606527530/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/",
         qty:3
       },
       {
         name:'LET GO',
         img:'https://f4.bcbits.com/img/a3366992640_2.jpg',
-        price:3,
-        description:'Legend has it that the Manhattan originated in New York City, sometime in the 1870s, mixed together in honor of hometown presidential candidate Samuel J. Tilden. ',
+        price:5,
+        description:"https://bandcamp.com/EmbeddedPlayer/album=4000605870/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/",
         qty:3
       },
       {
         name:'scratch',
         img:'https://f4.bcbits.com/img/a2882240015_2.jpg',
-        price:3,
-        description:'The Old Fashioned is one of the oldest cocktails, developed during the 19th century. Originally, an "old fashioned" cocktail was a standard cocktail created by combining spirits, bitters, water, and sugar. ',
+        price:5,
+        description:"https://bandcamp.com/EmbeddedPlayer/album=2678158321/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/",
         qty:3
       },
       {
-        name:'Keepsake',
+        name:'Keepsake (No Kings 2011)',
         img:'https://f4.bcbits.com/img/a1252952152_2.jpg',
-        price:3,
-        description:'When it comes to the Daiquiri, you need to set aside your preconceptions about sickly-sweet slushy concoctions. ',
+        price:5,
+        description:"https://bandcamp.com/EmbeddedPlayer/album=645523319/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/",
         qty:3
       },
       {
         name:'Stride',
         img:'https://f4.bcbits.com/img/a1782609472_2.jpg',
-        price:3,
-        description:'The Negroni is a world-famous Italian aperitivo created in Florence, Italy in 1919. The cocktail traditionally mixes gin, sweet vermouth, and the iconic Italian red bitter Campari, though the use of other bitters is a source of debate. As the story goes, the drink was invented after Count Camillo Negroni requested an Americano with more kick while imbibing at the city’s Caffe Giacosa. The resulting cocktail, which included gin, was named in honor of the Count. The Negroni is often served before a meal in order to stimulate the appetite, but is versatile enough to be enjoyed at any time. ',
+        price:5,
+        description:"https://bandcamp.com/EmbeddedPlayer/album=126389843/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/",
         qty:3
       },
       {
         name:'No Titles',
         img:'https://f4.bcbits.com/img/a2046075342_2.jpg',
-        price:3,
-        description:'Legend has it that the Manhattan originated in New York City, sometime in the 1870s, mixed together in honor of hometown presidential candidate Samuel J. Tilden. ',
+        price:5,
+        description:"https://bandcamp.com/EmbeddedPlayer/album=3757968939/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/",
         qty:3
       },
       {
         name:'13 Pictures',
         img:'https://f4.bcbits.com/img/a2889208310_2.jpg',
-        price:3,
-        description:'The Old Fashioned is one of the oldest cocktails, developed during the 19th century. Originally, an "old fashioned" cocktail was a standard cocktail created by combining spirits, bitters, water, and sugar. ',
+        price:5,
+        description:"https://bandcamp.com/EmbeddedPlayer/album=1488597704/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/",
         qty:3
       },
       {
         name:'Tape Drag',
         img:'https://f4.bcbits.com/img/a2082331891_2.jpg',
-        price:3,
-        description:'When it comes to the Daiquiri, you need to set aside your preconceptions about sickly-sweet slushy concoctions. ',
+        price:5,
+        description:"https://bandcamp.com/EmbeddedPlayer/album=186268606/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/",
         qty:3
       },
       {
         name:'distance',
         img:'https://f4.bcbits.com/img/a0085759493_2.jpg',
-        price:3,
-        description:'The Negroni is a world-famous Italian aperitivo created in Florence, Italy in 1919. The cocktail traditionally mixes gin, sweet vermouth, and the iconic Italian red bitter Campari, though the use of other bitters is a source of debate. As the story goes, the drink was invented after Count Camillo Negroni requested an Americano with more kick while imbibing at the city’s Caffe Giacosa. The resulting cocktail, which included gin, was named in honor of the Count. The Negroni is often served before a meal in order to stimulate the appetite, but is versatile enough to be enjoyed at any time. ',
+        price:5,
+        description:"https://bandcamp.com/EmbeddedPlayer/album=3231649267/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/",
         qty:3
       },
       {
         name:'cold night',
         img:'https://f4.bcbits.com/img/a3685371929_2.jpg',
-        price:3,
-        description:'Legend has it that the Manhattan originated in New York City, sometime in the 1870s, mixed together in honor of hometown presidential candidate Samuel J. Tilden. ',
+        price:5,
+        description:"https://bandcamp.com/EmbeddedPlayer/album=3560209945/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/",
         qty:3
       }
     ],

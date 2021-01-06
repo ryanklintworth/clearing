@@ -17,38 +17,38 @@
   </nav>
   <div class="show-container">
     <div class="show-image-content">
-      <img class="show-item-image" src="<%=item.img%>" alt="An image of a <%=item.name%>">
+      <iframe class="album-image" style=" width: 700px; height: 820px;" src=<%=item.description; %> seamless><a href="https://clearing.bandcamp.com/album/spaces-balance">Spaces/Balance by clearing</a></iframe>
+      <!-- <img class="show-item-image" src="<%=item.img%>" alt="An image of a <%=item.name%>"> -->
     </div>
-    <div class="show-info-content">
-      <h1><%=item.name%></h1>
-      <p><%=item.description; %></p>
-      <% if (item.qty <= 0) { %>
-        <h3>OUT OF STOCK</h3>
-        <% } else { %>
-          <h3>Only <%=item.qty%> remaining</h3>
-          <h5>Price: $<%=item.price; %></h5>
-          <div class="buy-button">
-            <form action="/<%=item._id%>/buy?_method=put" method="POST">
-              <button type="submit">BUY</button>
-            </form>
-            <% } %>
-          </div>
-          <!-- edit button -->
-          <div class="edit-button">
-            <a href="/<%=item._id%>/edit"><button type="button" name="button">EDIT</button></a>
-          </div>
-          <!-- delete button -->
-          <div class="delete-button">
-            <form action="/<%=item._id%>?_method=DELETE" method="POST">
-              <button type="submit" class="delete-button">DELETE</button>
-            </form>
-          </div>
-          <!-- back button -->
-          <div class="back-button">
-            <a href="/"><button type="button" name="button">BACK</button></a>
-          </div>
+  <div class="show-info-content">
+    <h1><%=item.name%></h1>
+    <!-- <p><%=item.description; %></p> -->
+    <% if (item.qty <= 0) { %>
+      <h3>OUT OF STOCK</h3>
+      <% } else { %>
+        <h3>Only <%=item.qty%> remaining</h3>
+        <h5>Price: $<%=item.price; %></h5>
+        <div class="buy-button">
+          <form action="/<%=item._id%>/buy?_method=put" method="POST">
+            <button type="submit">BUY</button>
+          </form>
+          <% } %>
+        </div>
+        <!-- edit button -->
+        <div class="edit-button">
+          <a href="/<%=item._id%>/edit"><button type="button" name="button">EDIT</button></a>
+        </div>
+        <!-- delete button -->
+        <div class="delete-button">
+          <form action="/<%=item._id%>?_method=DELETE" method="POST">
+            <button type="submit" class="delete-button">DELETE</button>
+          </form>
+        </div>
+        <!-- back button -->
+        <div class="back-button">
+          <a href="/"><button type="button" name="button">BACK</button></a>
         </div>
       </div>
-      <footer></footer>
-    </body>
-    </html>
+    </div>
+  </body>
+  </html>
